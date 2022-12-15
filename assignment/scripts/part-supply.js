@@ -24,7 +24,7 @@ console.log(removedItem);
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
-supplyChanges.push('25');
+supplyChanges.push(25);
 
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
@@ -39,7 +39,7 @@ for (let i = 0; i < supplyChanges.length; i++) {
     if(supplyChanges[i] > 0) {
         console.log('Added ' + supplyChanges[i] + ' parts.');
     }
-    else if ( supplyChanges[i] == 0) {
+    else if ( supplyChanges[i] === 0) {
         console.log('No Change.');
     }
     else {
@@ -72,6 +72,12 @@ for (supply of supplyChanges) {
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
 
+let suppliesSum = 0;
+for (supply of supplyChanges) {
+    suppliesSum += supply;
+}
+
+console.log(suppliesSum); 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
 //    There are 572 parts in total, and each box holds 7 parts.
@@ -79,3 +85,13 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+
+let partsTotal = 572;
+let boxes = 0;
+
+while (partsTotal > 7) {
+    boxes++;
+    partsTotal -= 7;
+}
+
+console.log(boxes + ' Boxes were filed and ' + partsTotal + ' were leftover.');
