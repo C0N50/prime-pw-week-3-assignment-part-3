@@ -11,6 +11,7 @@ console.log(partsNeeded);
 //    the following numbers: 3, 5, -6, 0, 7, 11
 console.log('2. Array of supplyChanges:');
 let supplyChanges = [3, 5, -6, 0, 7, 11];
+console.log(supplyChanges);
 
 // 3. Console log the value of the second item in the 'supplyChanges' array
 console.log('3. Second supplyChange is:');
@@ -89,7 +90,7 @@ console.log('9. Filling boxes with a "while" loop');
 let partsTotal = 572;
 let boxes = 0;
 
-while (partsTotal > 7) {
+while (partsTotal > 7) { 
     boxes++;
     partsTotal -= 7;
 }
